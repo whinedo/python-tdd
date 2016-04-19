@@ -22,7 +22,7 @@ SECRET_KEY = 'f^pm^3-igpl_wh%l^zf)#gad#87xt$^@tv^0qj_*6#lc+palgg'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-TEMPLATE_DEBUG = True
+#TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -50,6 +50,7 @@ TEMPLATES = [
     },
 ]
 
+TEMPLATES[0]['OPTIONS']['debug'] = True
 
 # Application definition
 
