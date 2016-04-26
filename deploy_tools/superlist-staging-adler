@@ -1,0 +1,19 @@
+server{
+	listen 80;
+	#server_name  superlist-staging-adler;
+	server_name  adler;
+
+	location /static {
+		alias /home/hector/sites/superlists-staging-adler/static;
+	}
+
+#	location / {
+#		proxy_pass http://localhost:8000;
+#	}
+
+	location / {
+		proxy_set_header Host $host;
+		proxy_pass http://unix:/tmp/superlists-staging-adler.socket;
+	}
+}
+
